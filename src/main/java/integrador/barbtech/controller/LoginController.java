@@ -6,9 +6,6 @@ import integrador.barbtech.view.LoginMain;
 import integrador.barbtech.view.RetaguardaView;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class LoginController implements ControllerInterface {
