@@ -1,7 +1,6 @@
 package integrador.barbtech.view;
 
 import integrador.barbtech.controller.LoginController;
-import java.awt.Color;
 import javax.swing.JFrame;
 
 public class LoginMain extends javax.swing.JFrame {
