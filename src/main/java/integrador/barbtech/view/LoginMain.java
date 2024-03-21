@@ -1,7 +1,7 @@
 package integrador.barbtech.view;
 
 import integrador.barbtech.controller.LoginController;
-import javax.swing.JFrame;
+import java.awt.event.KeyEvent;
 
 public class LoginMain extends javax.swing.JFrame {
 
@@ -9,24 +9,15 @@ public class LoginMain extends javax.swing.JFrame {
 
     public LoginMain() {
         initComponents();
-        inicializaTelaCentro();
-
+        setLocationRelativeTo(null);
     }
 
-    private void inicializaTelaCentro() {
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
-    }
-
-    public void logar() {
-        String senha = new String(jpfSenha.getPassword());
-        lc.loginController(jtfUsuario.getText(), senha);
-    }
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jpnTelaInicial = new javax.swing.JPanel();
         jpnFormLogin = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -37,14 +28,11 @@ public class LoginMain extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(11, 34, 115));
-        setPreferredSize(new java.awt.Dimension(1366, 768));
+        setPreferredSize(new java.awt.Dimension(300, 412));
         setResizable(false);
 
-        jpnTelaInicial.setBackground(new java.awt.Color(11, 34, 115));
-        jpnTelaInicial.setForeground(new java.awt.Color(11, 34, 115));
-        jpnTelaInicial.setPreferredSize(new java.awt.Dimension(1366, 768));
-
-        jpnFormLogin.setBackground(new java.awt.Color(9, 22, 68));
+        jpnFormLogin.setBackground(new java.awt.Color(13, 85, 144));
+        jpnFormLogin.setPreferredSize(new java.awt.Dimension(300, 412));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -61,6 +49,11 @@ public class LoginMain extends javax.swing.JFrame {
                 jtfUsuarioActionPerformed(evt);
             }
         });
+        jtfUsuario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfUsuarioKeyReleased(evt);
+            }
+        });
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -71,7 +64,13 @@ public class LoginMain extends javax.swing.JFrame {
                 jpfSenhaActionPerformed(evt);
             }
         });
+        jpfSenha.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jpfSenhaKeyReleased(evt);
+            }
+        });
 
+        btLogin.setBackground(new java.awt.Color(185, 238, 136));
         btLogin.setText("LOGAR");
         btLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,84 +86,81 @@ public class LoginMain extends javax.swing.JFrame {
                 .addGroup(jpnFormLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpnFormLoginLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jpnFormLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jtfUsuario, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jpfSenha, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jpnFormLoginLayout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addGroup(jpnFormLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jpfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 34, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnFormLoginLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btLogin)
-                .addGap(115, 115, 115))
+                        .addGap(109, 109, 109)
+                        .addComponent(btLogin)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpnFormLoginLayout.setVerticalGroup(
             jpnFormLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnFormLoginLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(59, 59, 59)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                .addGap(32, 32, 32)
                 .addComponent(jLabel2)
-                .addGap(2, 2, 2)
-                .addComponent(jtfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jtfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jpfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btLogin)
-                .addGap(105, 105, 105))
-        );
-
-        javax.swing.GroupLayout jpnTelaInicialLayout = new javax.swing.GroupLayout(jpnTelaInicial);
-        jpnTelaInicial.setLayout(jpnTelaInicialLayout);
-        jpnTelaInicialLayout.setHorizontalGroup(
-            jpnTelaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnTelaInicialLayout.createSequentialGroup()
-                .addGap(526, 526, 526)
-                .addComponent(jpnFormLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(524, 524, 524))
-        );
-        jpnTelaInicialLayout.setVerticalGroup(
-            jpnTelaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnTelaInicialLayout.createSequentialGroup()
-                .addGap(195, 195, 195)
-                .addComponent(jpnFormLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(187, 187, 187))
+                .addGap(169, 169, 169))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpnTelaInicial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jpnFormLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpnTelaInicial, javax.swing.GroupLayout.DEFAULT_SIZE, 784, Short.MAX_VALUE)
+            .addComponent(jpnFormLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jtfUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfUsuarioActionPerformed
+    private void btLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLoginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtfUsuarioActionPerformed
+        logar();
+        //JOptionPane.showMessageDialog(null, "O id é: "+lc.getUserId());
+    }//GEN-LAST:event_btLoginActionPerformed
+
+    private void jpfSenhaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jpfSenhaKeyReleased
+        // TODO add your handling code here:
+        if(evt.getKeyCode() == KeyEvent.VK_F11){
+            LoginAdministrador la = new LoginAdministrador();
+            la.setVisible(true);
+            this.dispose();
+        }
+    }//GEN-LAST:event_jpfSenhaKeyReleased
 
     private void jpfSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpfSenhaActionPerformed
         // TODO add your handling code here:
         logar();
     }//GEN-LAST:event_jpfSenhaActionPerformed
 
-    private void btLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLoginActionPerformed
+    private void jtfUsuarioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfUsuarioKeyReleased
         // TODO add your handling code here:
-        logar();
-    }//GEN-LAST:event_btLoginActionPerformed
+        if(evt.getKeyCode() == KeyEvent.VK_F11){
+            LoginAdministrador la = new LoginAdministrador();
+            la.setVisible(true);
+            this.dispose();
+        }
+    }//GEN-LAST:event_jtfUsuarioKeyReleased
+
+    private void jtfUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfUsuarioActionPerformed
 
     public static void main(String args[]) {
 
@@ -205,7 +201,16 @@ public class LoginMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPasswordField jpfSenha;
     private javax.swing.JPanel jpnFormLogin;
-    private javax.swing.JPanel jpnTelaInicial;
     private javax.swing.JTextField jtfUsuario;
     // End of variables declaration//GEN-END:variables
+
+    
+    
+    
+
+    public void logar() {
+        String senha = new String(jpfSenha.getPassword());
+        lc.loginController(jtfUsuario.getText(), senha, this);
+    }
+    
 }

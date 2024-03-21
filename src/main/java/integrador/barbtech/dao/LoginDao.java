@@ -28,31 +28,52 @@ public class LoginDao implements DaoInterfaces {
 
     }
 
-    public boolean loginDao(String usuario, String senhacriptografada) {
-    boolean usuarioExiste = false;
+    /*public boolean loginDao(String usuario, String senhacriptografada) {
+        boolean usuarioExiste = false;
 
-    sql = "SELECT * FROM usuario WHERE usuario = ? AND senha = ?";
+        sql = "SELECT * FROM usuario WHERE usuario = ? AND senha = ?";
 
-    try {
-        pstmt = ConnectionDb.abreConnection().prepareStatement(sql);
-        // Define os valores dos parâmetros
-        pstmt.setString(1, usuario);
-        pstmt.setString(2, senhacriptografada);
-        rs = pstmt.executeQuery();
-                
-        // Verifica se há algum resultado retornado
-        if (rs.next()) {
-            // Se houver um resultado, significa que o usuário existe e a senha está correta
-            usuarioExiste = true;
+        try {
+            pstmt = ConnectionDb.abreConnection().prepareStatement(sql);
+            // Define os valores dos parâmetros
+            pstmt.setString(1, usuario);
+            pstmt.setString(2, senhacriptografada);
+            rs = pstmt.executeQuery();
+
+            // Verifica se há algum resultado retornado
+            if (rs.next()) {
+                // Se houver um resultado, significa que o usuário existe e a senha está correta
+                usuarioExiste = true;
+            }
+        } catch (SQLException sex) {
+            JOptionPane.showMessageDialog(null, sex);
+            System.out.println("integrador.barbtech.dao.LoginDao.loginDao()" + sex);
         }
-    } catch (SQLException sex) {
-        JOptionPane.showMessageDialog(null, sex);
-        System.out.println("integrador.barbtech.dao.LoginDao.loginDao()"+sex);
+        return usuarioExiste;
+
+    }*/
+
+    public int getUserId(String usuario, String senhaCriptografada) {
+        int userId = -1; 
+
+        sql = "SELECT id FROM usuario WHERE usuario = ? AND senha = ?";
+
+        try {
+            pstmt = ConnectionDb.abreConnection().prepareStatement(sql);
+            pstmt.setString(1, usuario);
+            pstmt.setString(2, senhaCriptografada);
+            rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                userId = rs.getInt("id");
+            }
+        } catch (SQLException sex) {
+            JOptionPane.showMessageDialog(null, sex);
+            System.out.println("integrador.barbtech.dao.LoginDao.getUserId()" + sex);
+        }
+
+        return userId;
     }
-    return usuarioExiste;
-}
-
-
     /*
     
     public void consultaDao(Object... valor) throws SQLException {
