@@ -4,8 +4,10 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JPanel;
 
 public class SetIcon {
     
@@ -32,5 +34,8 @@ public class SetIcon {
         jmiTrocarUsuario.setIcon(imageIcon);
 
     }
+    
+    
+
     
 }

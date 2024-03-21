@@ -25,7 +25,6 @@ public class LoginAdministrador extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(300, 412));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(13, 85, 144));
@@ -35,6 +34,12 @@ public class LoginAdministrador extends javax.swing.JFrame {
         jbVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbVoltarActionPerformed(evt);
+            }
+        });
+
+        jpfSenhaAdministrador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jpfSenhaAdministradorActionPerformed(evt);
             }
         });
 
@@ -78,26 +83,26 @@ public class LoginAdministrador extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jbLogarTelaAdm)
-                .addGap(113, 113, 113))
+                .addGap(111, 111, 111))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jbVoltar)
-                .addGap(27, 27, 27)
                 .addComponent(jLabel3)
-                .addGap(56, 56, 56)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jtfUsuarioAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jpfSenhaAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jbLogarTelaAdm)
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 192, Short.MAX_VALUE)
+                .addComponent(jbVoltar)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -116,6 +121,7 @@ public class LoginAdministrador extends javax.swing.JFrame {
 
     private void jbLogarTelaAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLogarTelaAdmActionPerformed
         // TODO add your handling code here:
+        logar();
     }//GEN-LAST:event_jbLogarTelaAdmActionPerformed
 
     private void jbVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVoltarActionPerformed
@@ -124,6 +130,11 @@ public class LoginAdministrador extends javax.swing.JFrame {
         lm.setVisible(true);
         dispose();
     }//GEN-LAST:event_jbVoltarActionPerformed
+
+    private void jpfSenhaAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpfSenhaAdministradorActionPerformed
+        // TODO add your handling code here:
+        logar();
+    }//GEN-LAST:event_jpfSenhaAdministradorActionPerformed
 
     
 
