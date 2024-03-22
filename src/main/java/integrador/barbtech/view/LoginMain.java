@@ -31,7 +31,7 @@ public class LoginMain extends JFrame {
         setBackground(new java.awt.Color(11, 34, 115));
         setResizable(false);
 
-        jpnFormLogin.setBackground(new java.awt.Color(13, 85, 144));
+        jpnFormLogin.setBackground(new java.awt.Color(102, 102, 255));
         jpnFormLogin.setPreferredSize(new java.awt.Dimension(300, 412));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -93,25 +93,24 @@ public class LoginMain extends JFrame {
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jpnFormLoginLayout.createSequentialGroup()
-                        .addGroup(jpnFormLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jpnFormLoginLayout.createSequentialGroup()
-                                .addGap(48, 48, 48)
-                                .addComponent(jtfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jpnFormLoginLayout.createSequentialGroup()
-                                .addGap(49, 49, 49)
-                                .addComponent(jpfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 46, Short.MAX_VALUE)))
+                        .addGap(49, 49, 49)
+                        .addComponent(jpfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnFormLoginLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(btLogin)
                 .addGap(112, 112, 112))
+            .addGroup(jpnFormLoginLayout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jtfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         jpnFormLoginLayout.setVerticalGroup(
             jpnFormLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnFormLoginLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel1)
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -120,7 +119,7 @@ public class LoginMain extends JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jpfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(22, 22, 22)
                 .addComponent(btLogin)
                 .addContainerGap(206, Short.MAX_VALUE))
         );
